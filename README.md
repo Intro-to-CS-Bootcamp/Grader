@@ -10,3 +10,9 @@ If any bugs occur, let me know. Will update as soon as possible.
 Also, don't forget to download gspread from pip!
 
 pip install gspread
+
+
+Currently, there are two ways to update grades.
+
+Per individual student:
+  This will iterate through a student and the week's assignments. Both student and week are parameters that must be provided. Student is not case sensitive. Week must be an int.
