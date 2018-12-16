@@ -8,3 +8,5 @@ If any bugs occur, let me know. Will update as soon as possible.
 
 
 Also, don't forget to download gspread from pip!
+
+pip install gspread
