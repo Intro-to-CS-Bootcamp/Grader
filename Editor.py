@@ -23,6 +23,8 @@ def editor(state, feeds, googleapis, json_file, spread_sheet_name):
             state = "Invalid argument types!"
         except gspread.exceptions.CellNotFound:
             state = "Cell not found!"
+        except IndexError:
+            state = "Not a valid range!"
 
 
 
