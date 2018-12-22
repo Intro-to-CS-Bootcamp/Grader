@@ -8,7 +8,7 @@ class Manager:
         # a list for the student names with their col and row
         # and a list to store the weeks with their respective range
         self.master_roster = authorize.initialize(0)
-        self.student_cells = self.master_roster.range("A3:A9")
+        self.student_cells = self.master_roster.range("A3:A71")
 
         self.week_ranges = ["B{0}:B{0}", "C{0}:I{0}"]
 
