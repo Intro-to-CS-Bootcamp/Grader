@@ -8,7 +8,8 @@ def editor(state, feeds, googleapis, json_file, spread_sheet_name):
     termination_clause = "EXIT"
     manager_functions = {"exit" : lambda: termination_clause,
                          "help" : lambda: manager_keys,
-                         "grade" : manager.grade_name_week}
+                         "grade" : manager.grade_name_week,
+                         "range" : manager.grade_by_range}
     manager_keys = "The commands are: " + ', '.join([k for k in manager_functions.keys()])
 
     while state != termination_clause:

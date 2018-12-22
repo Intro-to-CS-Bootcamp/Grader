@@ -32,7 +32,7 @@ class Manager:
         # the weeks assignments and updates grades at the end.
 
         # Formats name and week to find in the sheet.
-        name, week = name, int(week)
+        name, week = name.lower().capitalize(), int(week)
         print("Grading {}:".format(name))
 
         # Finds the range of cells to easily iterate through.
@@ -57,3 +57,9 @@ class Manager:
         for stdnt in self.student_cells:
             print(self.grade_name_week(stdnt.value, week))
         return "All students graded for week {}".format(week)
+
+    def grade_by_range(self, start, end, week):
+        start, end = int(start), int(end)
+        student_cells = self.master_roster.range("A{}:A{}".format(start, end))
+        for cell in student_cells:
+            print(self.grade_name_week(cell.value, week))
