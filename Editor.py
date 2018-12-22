@@ -3,6 +3,7 @@ from Authorize import *
 from Data import *
 
 def editor(state, feeds, googleapis, json_file, spread_sheet_name):
+    print("Wait while Editor loads")
     manager = Manager(Authorize(feeds, googleapis, json_file, spread_sheet_name))
     termination_clause = "EXIT"
     manager_functions = {"exit" : lambda: termination_clause,
