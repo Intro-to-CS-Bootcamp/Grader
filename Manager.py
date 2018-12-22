@@ -10,7 +10,7 @@ class Manager:
         self.master_roster = authorize.initialize(0)
         self.student_cells = self.master_roster.range("A3:A9")
 
-        self.week_ranges = ["C{0}:I{0}"]
+        self.week_ranges = ["B{0}:B{0}", "C{0}:I{0}"]
 
     def parse_input(self, user_input):
         clause, arguments = ";", ","
