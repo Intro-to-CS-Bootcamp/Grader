@@ -32,12 +32,12 @@ class Manager:
         # the weeks assignments and updates grades at the end.
 
         # Formats name and week to find in the sheet.
-        name, week = name.lower().capitalize(), int(week)
+        name, week = name, int(week)
         print("Grading {}:".format(name))
 
         # Finds the range of cells to easily iterate through.
         name_cell = self.master_roster.find(name)
-        week_range = self.week_ranges[week - 1].format(name_cell.row)
+        week_range = self.week_ranges[week].format(name_cell.row)
         week_range_assnmnts = self.master_roster.range(week_range)
 
         # Iterate and ask for grade for each assignment.
