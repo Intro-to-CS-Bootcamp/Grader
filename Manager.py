@@ -32,7 +32,7 @@ class Manager:
         # the weeks assignments and updates grades at the end.
 
         # Formats name and week to find in the sheet.
-        name, week = name.lower().capitalize(), int(week)
+        name, week = " ".join([n.lower().capitalize() for n in name.split(" ")]), int(week)
         print("Grading {}:".format(name))
 
         # Finds the range of cells to easily iterate through.
